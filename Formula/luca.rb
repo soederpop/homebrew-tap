@@ -26,7 +26,7 @@ class Luca < Formula
 
   def install
     if OS.mac?
-      bin.install "luca-darwin-#{Hardware::CPU.arm? ? "arm64" : "x64"}" => "luca"
+      bin.install "dist/release/luca-darwin-#{Hardware::CPU.arm? ? "arm64" : "x64"}" => "luca"
     else
       bin.install "luca-linux-#{Hardware::CPU.arm? ? "arm64" : "x64"}" => "luca"
     end
